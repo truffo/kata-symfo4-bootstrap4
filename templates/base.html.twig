@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Page d'exemple d'album photo intégrant l'ensemble des bonnes pratiques de qualité Web.">
+        <meta name="author" content="Sylvain FIX">
+        
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        
+        <link rel="stylesheet" href="/css/bootstrap.min.css" />
+        {% block stylesheets %}{% endblock %}
+
+        {# Favicons #}
+        <link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+        <link rel="icon" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+        <link rel="icon" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+        <link rel="manifest" href="/assets/img/favicons/manifest.json">
+        <link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+        <link rel="icon" href="/favicon.ico">
+
+        <meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
+        <meta name="theme-color" content="#563d7c">
+
+        {# Twitter #}
+        <meta name="twitter:card" content="">
+        <meta name="twitter:site" content="">
+        <meta name="twitter:creator" content="">
+        <meta name="twitter:title" content="">
+        <meta name="twitter:description" content="">
+        <meta name="twitter:image" content="">
+
+        {# Facebook #}
+        <meta property="og:url" content="">
+        <meta property="og:title" content="">
+        <meta property="og:description" content="">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="">
+        <meta property="og:image:secure_url" content="">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+
+        {# Google Analytics #}
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-XXXXXX-XX', 'getbootstrap.com');
+            ga('send', 'pageview');
+        </script>
+    </head>
+    <body>
+
+        {# Liens d'évitemments #}
+        <ul id="top" class="skip-links list-inline">
+            <li class="list-inline-item"><a href="#menu">Aller au menu</a></li>
+            <li class="list-inline-item"><a href="#content">Aller au contenu</a></li>
+        </ul>
+        
+        <h1 class="sr-only">Titre 1</h1>
+
+        {% block header %}{% endblock %}
+
+        {# Zone de contenu principale #}
+        <main id="content" role="main">
+            {% block body %}{% endblock %}
+        </main>
+
+        {% block footer %}{% endblock %}
+        
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+        <script src="/js/bootstrap.min.js"></script>
+
+        {% block javascripts %}{% endblock %}
+
+    </body>
+</html>

@@ -1,0 +1,85 @@
+{% extends 'base.html.twig' %}
+
+{% block header %}
+    <header>
+        <div id="navbar-header" class="collapse bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-md-7 py-4">
+                        <h2 class="text-white">A propos</h2>
+                        <p class="text-muted">Ajoutez quelques informations sur l'album ci-dessous, l'auteur ou tout autre contexte. Faites-en quelques phrases de long afin que les gens puissent prendre quelques informations utiles. Ensuite, associez-les à des sites de réseaux sociaux ou à des informations de contact.</p>
+                    </div>
+                    <div class="col-sm-4 offset-md-1 py-4">
+                        <h2 class="text-white">Contact</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="/" class="text-white">Twitter</a></li>
+                            <li><a href="/" class="text-white">Facebook</a></li>
+                            <li><a href="/" class="text-white">Email</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navbar navbar-dark bg-dark box-shadow">
+            <div class="container d-flex justify-content-between">
+                <a href="/" class="navbar-brand d-flex align-items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+                    <strong>Album</strong>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-header" aria-controls="navbar-header" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+{% endblock %}
+
+{% block body %}
+    <section id="album-intro" class="jumbotron text-center">
+        <div class="container">
+            <h2 class="jumbotron-heading">Album exemple</h2>
+            <p class="lead text-muted">Quelque chose de court et menant à la collection ci-dessous - son contenu, le créateur, etc. Faites-le court et doux, mais pas trop court afin que les gens ne se contentent pas de l'ignorer complètement.</p>
+            <p>
+                <a href="/" class="btn btn-primary">Action principale</a>
+                <a href="/" class="btn btn-secondary">Action secondaire</a>
+            </p>
+        </div>
+    </section>
+
+    <section id="album-list" class="album">
+        <h2 class="sr-only">Liste des albums</h2>
+        <div class="container">
+            <div class="row">
+                {% for i in 0..5 %}
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top" src="https://dummyimage.com/550x225/000/fff" alt="" width="550" height="225">
+                            <div class="card-body">
+                                <p class="card-text">Ceci est une carte plus large avec le texte de soutien ci-dessous comme une introduction naturelle à un contenu supplémentaire. Ce contenu est un peu plus long.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    </div>
+                                    <small class="text-muted">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block footer %}
+    <footer class="text-muted">
+        <div class="container">
+            <p class="float-right">
+                <a href="#top">Retourner en haut</a>
+            </p>
+            <p>Album exemple is &copy; Bootstrap, but please download and customize it for yourself!</p>
+        </div>
+    </footer>
+{% endblock %}
